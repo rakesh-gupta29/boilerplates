@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.d {
+  border: 2px solid red;
+}
+
+@font-face {
+  font-family: "light";
+  src: url(../dist/assets/fonts/light.ttf);
+}
+
+@font-face {
+  font-family: "regular";
+  src: url(../dist/assets/fonts/regular.ttf);
+}

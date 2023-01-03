@@ -1,0 +1,10 @@
+@import "./app/starter.scss";
+
+@font-face {
+    font-family: regular;
+    src: url("../assets/fonts/lora.ttf");
+}
+
+h1 {
+    font-family: regular;
+}
