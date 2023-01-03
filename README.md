@@ -4,6 +4,6 @@ Collection of boilerplate repos with initial directory structure and style confi
 
 Repo contains the following boilerplates:
 
-- [HTML with tailwind](https://www.github.com/rakesh-gupta29/boilerplates/tree/main/html-tailwind.git) - HTML with Tailwind
-- [NextJS](https://www.github.com/rakesh-gupta29/boilerplates/tree/main/nextjs-chakraui-.git) - NextJS with ChakraUI
-- [Webpack](https://www.github.com/rakesh-gupta29/boilerplates/tree/main/webpack.git) - Webpack
+- [HTML with tailwind](https://github.com/rakesh-gupta29/boilerplates/tree/main/html-tailwind) - HTML with Tailwind
+- [NextJS](https://github.com/rakesh-gupta29/boilerplates/tree/main/nextjs-chakraui) - NextJS with ChakraUI
+- [Webpack](https://github.com/rakesh-gupta29/boilerplates/tree/main/webpack) - Webpack
