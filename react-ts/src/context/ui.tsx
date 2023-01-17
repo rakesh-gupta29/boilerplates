@@ -37,15 +37,15 @@ export type SIDEBAR_VIEWS = 'MOBILE_NAV'
 export interface State {
   isSidebar: boolean
   isModal: boolean
-  sidebarView: SIDEBAR_VIEWS
-  modalView: MODAL_VIEWS
+  sidebarView: string
+  modalView: string
 }
 
-const initialState: State = {
+const initialState = {
   isSidebar: false,
   isModal: true,
   modalView: 'SUCCESS_MODAL',
-  sidebarView: 'MOBILE_NAV',
+  sidebarView: '',
 }
 export const UIContext = createContext<State | any>(initialState)
 
@@ -128,11 +128,11 @@ export const UIProvider: FC<{ children?: ReactNode }> = (props) => {
       state.isModal
         ? dispatch({ type: 'CLOSE_MODAL' })
         : dispatch({ type: 'OPEN_MODAL' }),
-    [dispatch, state.isSidebar],
+    [dispatch, state.isSidebar, state.isModal],
   )
   const closeModalIfPresent = useCallback(
     () => state.isModal && dispatch({ type: 'CLOSE_MODAL' }),
-    [dispatch, state.isSidebar],
+    [dispatch, state.isSidebar, state.isModal],
   )
 
   const setModalView = useCallback(

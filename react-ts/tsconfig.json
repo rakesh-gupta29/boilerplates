@@ -6,6 +6,17 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "./src",
+    "paths": {
+      "assets/*":["./assets/*"],
+      "molecules/*":["./molecules/*"],
+      "atoms/*":["./atoms/*"],
+      "organisms/*":["./organisms/*"],
+      "layouts/*":["./layouts/*"],
+      "screens/*":["./screens/*"],
+      "static/*":["./static/*"],
+      "hooks/*":["./hooks/*"],
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -22,6 +33,5 @@
   },
   "include": [
     "src"
-  ],
-
+  ]
 }

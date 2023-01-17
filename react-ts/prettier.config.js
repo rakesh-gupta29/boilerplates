@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 module.exports = {
   printWidth: 80,
@@ -14,7 +14,7 @@ module.exports = {
   // That actually is enforced by AirBnB Style anyway.
   // Always useful. And guaranteed that you won't see boring errors,
   // that eats your time, because of nothing real.
-  trailingComma: "all",
+  trailingComma: 'all',
 
   // Whether to add a semicolon at the end of every line (semi: true),
   // or only at the beginning of lines that may introduce ASI failures (semi: false)
@@ -36,5 +36,5 @@ module.exports = {
   // - Always is visible that this is function (because the parens).
   // - If you first write single param and decide to add new one,
   // then you should also add a parens around the both - that's mess.
-  arrowParens: "always",
-};
+  arrowParens: 'always',
+}
