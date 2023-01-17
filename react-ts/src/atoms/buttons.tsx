@@ -1,7 +1,8 @@
-const FilledBtn = () => {
-  return <button> filled btn </button>;
-};
-const OutlineBtn = () => {
-  return <button> outlined btn</button>;
-};
-export { FilledBtn, OutlineBtn };
+import React from 'react'
+
+export function FilledBtn() {
+  return <button type="button"> filled btn </button>
+}
+export function OutlineBtn() {
+  return <button type="button">outlined btn</button>
+}

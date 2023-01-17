@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 // import { gsap } from 'gsap'
 
 // import { MODAL_VIEWS, useUIContext } from "../context/ui";

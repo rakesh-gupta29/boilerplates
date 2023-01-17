@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react'
 
 export default function SidebarWrapper({ children }: { children: ReactNode }) {
-  return <>{children}</>;
+  return <div>{children}</div>
 }

@@ -1,10 +1,10 @@
-import { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter, useRoutes } from 'react-router-dom'
 import { UIProvider } from './context/ui'
 import routes from './router'
 
 const RenderRoutes = () => {
-  let routeTree = useRoutes(routes())
+  const routeTree = useRoutes(routes())
   return routeTree
 }
 

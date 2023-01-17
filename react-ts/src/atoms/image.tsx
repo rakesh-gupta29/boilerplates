@@ -1,3 +1,5 @@
+import React from 'react'
+
 interface Props {
   src: string
   alt: string
@@ -6,7 +8,7 @@ interface Props {
   title?: string
 }
 
-const Image = ({ src, alt, className, loading = 'lazy', title }: Props) => {
+export function Image({ src, alt, className, loading = 'lazy', title }: Props) {
   return (
     <img
       src={src}
@@ -20,5 +22,3 @@ const Image = ({ src, alt, className, loading = 'lazy', title }: Props) => {
     />
   )
 }
-
-export { Image }

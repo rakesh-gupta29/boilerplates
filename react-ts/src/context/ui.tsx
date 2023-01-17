@@ -1,10 +1,8 @@
-import {
+import React, {
   useReducer,
   useMemo,
   useContext,
   createContext,
-  ReactNode,
-  FC,
   useCallback,
 } from 'react'
 
@@ -47,7 +45,7 @@ const initialState = {
   modalView: 'SUCCESS_MODAL',
   sidebarView: '',
 }
-export const UIContext = createContext<State | any>(initialState)
+export const UIContext = createContext<State>(initialState)
 
 function uiReducer(state: State, action: Action) {
   switch (action.type) {
@@ -89,10 +87,13 @@ function uiReducer(state: State, action: Action) {
         sidebarView: action.view,
       }
     }
+    default: {
+      return state
+    }
   }
 }
 
-export const UIProvider: FC<{ children?: ReactNode }> = (props) => {
+export function UIProvider(props: any) {
   const [state, dispatch] = useReducer(uiReducer, initialState)
 
   const openSidebar = useCallback(
@@ -128,11 +129,11 @@ export const UIProvider: FC<{ children?: ReactNode }> = (props) => {
       state.isModal
         ? dispatch({ type: 'CLOSE_MODAL' })
         : dispatch({ type: 'OPEN_MODAL' }),
-    [dispatch, state.isSidebar, state.isModal],
+    [dispatch, state],
   )
   const closeModalIfPresent = useCallback(
     () => state.isModal && dispatch({ type: 'CLOSE_MODAL' }),
-    [dispatch, state.isSidebar, state.isModal],
+    [dispatch, state.isModal],
   )
 
   const setModalView = useCallback(

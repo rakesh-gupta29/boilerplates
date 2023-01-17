@@ -1,10 +1,9 @@
+import React, { Fragment } from 'react'
 import { Outlet } from 'react-router-dom'
-
-import { Home, Error404 } from '../screens'
+import { Home, Error404 } from 'screens'
 import { Header, Footer } from 'organisms'
-import { ModalWrapper, ScreenWrapper, SidebarWrapper } from '../layouts'
 
-const ViewWithHeaderAndFooter = () => {
+function ViewWithHeaderAndFooter() {
   return (
     <>
       <Header />
@@ -13,7 +12,7 @@ const ViewWithHeaderAndFooter = () => {
     </>
   )
 }
-const routes = () => {
+export default function routes() {
   return [
     {
       path: '/',
@@ -26,5 +25,3 @@ const routes = () => {
     },
   ]
 }
-
-export default routes
