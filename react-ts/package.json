@@ -14,7 +14,6 @@
     "@types/react-transition-group": "^4.4.5",
     "formik": "^2.2.9",
     "gsap": "^3.11.4",
-    "husky": "8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.6.1",
@@ -32,6 +31,14 @@
     "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "postinstall": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "applypatch-msg": "echo apply patch hook called",
+      "pre-applypatch": "echo pre apply patch hook called",
+      "post-applypatch": "echo husky precommit hook called",
+      "pre-commit": " echo husky precommit hook called"
+    }
   },
   "eslintConfig": {
     "extends": [

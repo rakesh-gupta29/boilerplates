@@ -2,19 +2,10 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    fontSize: {
-    },
-    fontFamily: {
-    },
     extend: {
-      colors: {
-      },
+      colors: {},
       borderWidth: {
         1: '1px',
-      },
-      screens: {
-      },
-      gridTemplateColumns: {
       },
     },
   },
