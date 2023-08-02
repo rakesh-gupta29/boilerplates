@@ -1,89 +1,82 @@
-import React, { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react'
+import { NavLink, Link } from 'react-router-dom'
 
-interface AnchorProps {
-  to: string
-  ariaLabel?: string
-  title?: string
-  children: ReactNode
-  className?: string
-}
-interface ExternalAnchorProps extends AnchorProps {
-  referrerPolicy?:
-    | 'no-referrer'
-    | 'no-referrer'
-    | 'no-referrer-when-downgrade'
-    | 'unsafe-url'
-  rel?: 'author' | 'next' | 'alternate' | 'nofollow' | 'noopener'
-  target?: '_blank' | '_top' | '_self' | '_parent'
+const sizeMap = {
+  small: 'text-sm',
+  base: 'text-base',
+  large: ' text-base md:text-lg',
+  xl: ' text-base md:text-xl',
+  xxl: ' text-xl xl:text-2xl',
+  '3xl': ' text-xl md:text-2xl xl:text-3xl',
 }
 
-interface MasterNavProps {
-  withIcon: boolean
-  showRightChevron: boolean
+const colorMap = {
+  dark: 'text-black',
+  light: 'text-white',
 }
-export function NavOption({
-  to,
-  ariaLabel,
-  children,
-  title,
-  className,
-}: AnchorProps) {
+type MasterAnchorProps = {
+  size?: keyof typeof sizeMap
+  text: string
+  href: string
+  target?: '_self' | '_blank'
+}
+
+export function TextAnchor({
+  text,
+  target,
+  href,
+  color = 'dark',
+  size = 'base',
+  ...rest
+}: MasterAnchorProps & { color?: 'dark' | 'light' }) {
+  const sizeClass: string = sizeMap[size]
+  const colorClass: string = colorMap[color]
   return (
-    <Link to={to} aria-label={ariaLabel} title={title} className={className}>
-      {children}
+    <Link
+      target={target}
+      to={href}
+      {...rest}
+      className={`${sizeClass}  ${colorClass}`}
+    >
+      {text}
     </Link>
   )
 }
-
-export function ExternalLink({
-  to,
-  ariaLabel,
-  children,
-  title,
-  referrerPolicy = 'no-referrer-when-downgrade',
-  rel = 'author',
-  target = '_blank',
-  className,
-}: ExternalAnchorProps) {
+export function TextNavAnchor({
+  text,
+  target,
+  href,
+  color = 'dark',
+  size = 'base',
+  ...rest
+}: MasterAnchorProps & { color?: 'dark' | 'light' }) {
+  const sizeClass: string = sizeMap[size]
+  const colorClass: string = colorMap[color]
   return (
-    <a
-      href={to}
-      rel={rel}
-      referrerPolicy={referrerPolicy}
-      aria-label={ariaLabel}
-      title={title}
+    <NavLink
       target={target}
-      className={className}
+      to={href}
+      {...rest}
+      className={(navData) => {
+        return `${navData.isActive ? '' : ''}  ${sizeClass}  ${colorClass}`
+      }}
     >
-      {children}
-    </a>
+      {text}
+    </NavLink>
   )
 }
 
-export function MasterNav({
-  to,
-  ariaLabel,
-  children,
-  title,
-  referrerPolicy = 'no-referrer-when-downgrade',
-  rel = 'author',
-  target = '_blank',
-  withIcon = false,
-  showRightChevron,
-  className,
-}: ExternalAnchorProps & MasterNavProps) {
+export function MasterAnchor({
+  text,
+  size = 'base',
+  href,
+  target,
+  ...rest
+}: MasterAnchorProps) {
+  const sizeClass: string = sizeMap[size]
   return (
-    <a
-      href={to}
-      rel={rel}
-      referrerPolicy={referrerPolicy}
-      aria-label={ariaLabel}
-      title={title}
-      target={target}
-      className={`${className} flex flex-nowrap font-normal gap-3  text-blue  group items-center rounded-md bg-white font-bold text-lg`}
-    >
-      {children}
-    </a>
+    <Link to={href} target={target} {...rest} className={`${sizeClass} `}>
+      {text}
+    </Link>
   )
 }

@@ -1,6 +1,13 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Outlet } from 'react-router-dom'
-import { Home, Error404 } from 'screens'
+import {
+  PageHome,
+  PageError404,
+  PageAbout,
+  PageContact,
+  PageTermsAndConditions,
+  PagePrivacyPolicy,
+} from 'screens/index'
 import { Header, Footer } from 'organisms'
 
 function ViewWithHeaderAndFooter() {
@@ -12,16 +19,39 @@ function ViewWithHeaderAndFooter() {
     </>
   )
 }
+
 export default function routes() {
   return [
     {
       path: '/',
       element: <ViewWithHeaderAndFooter />,
-      children: [{ path: '/', element: <Home /> }],
-    },
-    {
-      path: '*',
-      element: <Error404 />,
+      children: [
+        {
+          path: '/',
+          element: <PageHome />,
+        },
+        {
+          path: '/contact',
+          element: <PageContact />,
+        },
+        {
+          path: '/about',
+          element: <PageAbout />,
+        },
+
+        {
+          path: '/terms-and-conditions',
+          element: <PageTermsAndConditions />,
+        },
+        {
+          path: '/privacy-policy',
+          element: <PagePrivacyPolicy />,
+        },
+        {
+          path: '*',
+          element: <PageError404 />,
+        },
+      ],
     },
   ]
 }

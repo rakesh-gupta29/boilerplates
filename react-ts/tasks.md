@@ -1,0 +1,2 @@
+- remove all unused dependencies from the package.json file
+- remove all unused imports from all files

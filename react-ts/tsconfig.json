@@ -16,6 +16,7 @@
       "screens/*":["./screens/*"],
       "static/*":["./static/*"],
       "hooks/*":["./hooks/*"],
+      "appFirebase/*":["./firebase/*"], // avoid conflict with the firebase package
     },
     "allowJs": true,
     "skipLibCheck": true,

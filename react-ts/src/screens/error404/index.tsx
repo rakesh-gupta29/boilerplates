@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function Error404() {
-  return <div> this is a basic code</div>
+export default function PageError404() {
+  return <div>PageError404</div>
 }

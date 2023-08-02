@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, useRoutes } from 'react-router-dom'
-import { UIProvider } from './context/ui'
 import routes from './router'
 
 const RenderRoutes = () => {
@@ -9,16 +8,10 @@ const RenderRoutes = () => {
 }
 
 function App() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0)
-  // }, [])
-
   return (
-    <UIProvider>
-      <BrowserRouter>
-        <RenderRoutes />
-      </BrowserRouter>
-    </UIProvider>
+    <BrowserRouter>
+      <RenderRoutes />
+    </BrowserRouter>
   )
 }
 

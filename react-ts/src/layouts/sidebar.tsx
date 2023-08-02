@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 
-export default function SidebarWrapper({ children }: { children: ReactNode }) {
-  return <div>{children}</div>
+export default function SidebarWrapper() {
+  return <div>SidebarWrapper</div>
 }

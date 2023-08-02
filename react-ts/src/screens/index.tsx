@@ -1,2 +1,6 @@
-export { default as Home } from './home'
-export { default as Error404 } from './error404'
+export { default as PageHome } from './home'
+export { default as PageAbout } from './about'
+export { default as PageError404 } from './error404'
+export { default as PageContact } from './contact'
+export { default as PageTermsAndConditions } from './terms_and_conditions'
+export { default as PagePrivacyPolicy } from './privacyPolicy'
