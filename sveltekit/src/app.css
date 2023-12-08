@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: 'CircularStd-Black';
+	src: url('/fonts/CircularStd-Black.otf');
+}
+@font-face {
+	font-family: 'CircularStd-Bold';
+	src: url('/fonts/CircularStd-Bold.otf');
+}
+@font-face {
+	font-family: 'CircularStd-Book';
+	src: url('/fonts/CircularStd-Book.otf');
+}
+@font-face {
+	font-family: 'CircularStd-Medium';
+	src: url('/fonts/CircularStd-Medium.otf');
+}
+@font-face {
+	font-family: 'CircularStd-Light';
+	src: url('/fonts/CircularStd-Light.otf');
+}
+
+@layer base {
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number']::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	h1 {
+		@apply text-3xl md:text-4xl xl:text-5xl leading-tight md:leading-tight xl:leading-tight;
+	}
+	h2 {
+		@apply text-2xl md:text-3xl xl:text-4xl leading-tight md:leading-tight xl:leading-tight;
+	}
+	h3 {
+		@apply text-xl md:text-2xl xl:text-3xl leading-tight md:leading-tight xl:leading-tight;
+	}
+	h4 {
+		@apply text-lg md:text-xl xl:text-2xl leading-tight md:leading-tight xl:leading-tight;
+	}
+	h5 {
+		@apply text-base md:text-lg xl:text-xl leading-tight md:leading-tight xl:leading-tight;
+	}
+	h6 {
+		@apply text-sm md:text-base xl:text-lg leading-tight md:leading-tight xl:leading-tight;
+	}
+	p {
+		@apply text-sm xl:text-base xl:leading-snug leading-snug;
+	}
+}
+
+@layer components {
+	.blade-top-padding {
+		@apply pt-8 md:pt-10 lg:pt-12 xl:pt-16 2xl:pt-20;
+	}
+
+	.blade-top-padding-sm {
+		@apply pt-4 md:pt-6 lg:pt-8 xl:pt-10 2xl:pt-14;
+	}
+
+	.blade-top-padding-lg {
+		@apply pt-10 md:pt-12 lg:pt-16 xl:pt-20 2xl:pt-24;
+	}
+
+	.blade-top-padding-xl {
+		@apply pt-16 xl:pt-20 2xl:pt-32;
+	}
+
+	.blade-bottom-padding {
+		@apply pb-8 md:pb-10 lg:pb-12 xl:pb-16 2xl:pb-20;
+	}
+
+	.blade-bottom-padding-sm {
+		@apply pb-4 md:pb-6 lg:pb-8 xl:pb-10 2xl:pb-14;
+	}
+
+	.blade-bottom-padding-lg {
+		@apply pb-10 md:pb-12 lg:pb-16 xl:pb-20 2xl:pb-24;
+	}
+
+	.blade-bottom-padding-xl {
+		@apply pb-16 xl:pb-20 2xl:pb-32;
+	}
+
+	.w-container-sm {
+		@apply max-w-screen-2xl mx-auto sm:w-11/12 md:w-10/12 px-3;
+	}
+
+	.w-container {
+		@apply max-w-screen-2xl mx-auto md:w-11/12 lg:w-10/12 px-3;
+	}
+
+	.w-container-lg {
+		@apply md:w-11/12 px-3 max-w-screen-2xl mx-auto;
+	}
+
+	.w-container-xl {
+		@apply md:w-11/12 px-3 xl:px-16 2xl:px-20 max-w-[1920px] mx-auto;
+	}
+}
