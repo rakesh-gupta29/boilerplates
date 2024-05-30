@@ -14,3 +14,5 @@ Repo contains the following boilerplates:
 - [Node-TS Mongo](https://github.com/rakesh-gupta29/boilerplates/tree/main/node-with-mongo)
 - [Golang](https://github.com/rakesh-gupta29/boilerplates/tree/main/golang)
 - [React TS](https://github.com/rakesh-gupta29/boilerplates/tree/main/react-ts)
+- [NestJS backend](https://github.com/rakesh-gupta29/boilerplates/tree/main/nestjs-backend)
+

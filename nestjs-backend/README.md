@@ -1,4 +1,7 @@
-## Cafe backend code
+## Nestjs boilerplate code
+
+Can be used as the good starter point for the backend app
+
 
 comment keywords:
 
