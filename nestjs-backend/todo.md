@@ -1,0 +1,4 @@
+- performance monitoring and global error handlers.
+- create a global class/object for config which is going to hold all the app config.
+- each module file has a desc regarding what does that module do.
+- create proper indexing and shradding for the users table

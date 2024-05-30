@@ -1,0 +1,23 @@
+model User {
+    id        Int      @id @default(autoincrement())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    email String @unique
+    hash  String
+
+    name     String
+    password String
+    mode     String
+
+    facebook  String?
+    instagram String?
+    twitter   String?
+    linkedin  String?
+
+    profileURL String
+}
+
+// include the field for isVerified.
+
+// include the fields for the chats and the orders
